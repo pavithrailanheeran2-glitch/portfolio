@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +16,6 @@
 --nav-bg:#020617;
 --card-bg:#1e293b;
 --accent:#38bdf8;
---btn-bg:#38bdf8;
---btn-text:black;
 }
 
 .light-mode{
@@ -24,8 +24,6 @@
 --nav-bg:#e2e8f0;
 --card-bg:#f1f5f9;
 --accent:#2563eb;
---btn-bg:#2563eb;
---btn-text:white;
 }
 
 body{
@@ -93,8 +91,8 @@ border-radius:10px;
 }
 
 .btn{
-background:var(--btn-bg);
-color:var(--btn-text);
+background:var(--accent);
+color:white;
 padding:10px 20px;
 border-radius:20px;
 text-decoration:none;
@@ -109,18 +107,13 @@ padding:20px;
 background:var(--nav-bg);
 }
 
-@media(max-width:768px){
-.hero{
-padding:40px 10px;
-}
-}
-
 </style>
 </head>
 
 <body>
 
 <nav>
+
 <h2>Pavithra</h2>
 
 <div>
@@ -129,10 +122,13 @@ padding:40px 10px;
 <a href="#education">Education</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#references">References</a>
 <a href="#contact">Contact</a>
 
 <button id="theme-toggle">🌙</button>
+
 </div>
+
 </nav>
 
 <section class="hero">
@@ -146,7 +142,7 @@ padding:40px 10px;
 <p>Jaffna, Sri Lanka</p>
 
 <p>
-📞 +94 750258505  
+📞 +94 750258505 <br>
 📧 ilanheeranpavithra@gmail.com
 </p>
 
@@ -171,8 +167,7 @@ padding:40px 10px;
 
 Aspiring data professional with a strong foundation in Applied Mathematics and Computing.  
 Skilled in data analysis, machine learning, and software development.  
-
-Passionate about using data and technology to solve real-world problems and support data-driven decision-making.
+Passionate about using data and technology to solve real-world problems.
 
 </p>
 
@@ -194,13 +189,10 @@ Passionate about using data and technology to solve real-world problems and supp
 
 <ul>
 
-<li>Conduct software quality assurance testing</li>
-
-<li>Develop Python automation scripts</li>
-
-<li>Identify and track software bugs</li>
-
-<li>Collaborate with developers to improve product quality</li>
+<li>Software quality assurance testing</li>
+<li>Python automation scripts</li>
+<li>Bug tracking and reporting</li>
+<li>Collaboration with developers</li>
 
 </ul>
 
@@ -216,13 +208,10 @@ Passionate about using data and technology to solve real-world problems and supp
 
 <ul>
 
-<li>Managed sales operations</li>
-
-<li>Provided financial consultation</li>
-
-<li>Maintained strong customer relationships</li>
-
-<li>Analyzed sales data</li>
+<li>Sales management</li>
+<li>Financial consultation</li>
+<li>Customer relationship management</li>
+<li>Sales data analysis</li>
 
 </ul>
 
@@ -266,7 +255,7 @@ Passionate about using data and technology to solve real-world problems and supp
 
 <p><b>Programming:</b> Python, R, SQL, Java, C++</p>
 
-<p><b>Web:</b> HTML, CSS, JavaScript, React, PHP</p>
+<p><b>Web:</b> HTML, CSS, JavaScript, React</p>
 
 <p><b>Data Science:</b> Machine Learning, AI, Data Visualization</p>
 
@@ -284,35 +273,43 @@ Passionate about using data and technology to solve real-world problems and supp
 
 <div class="card">
 
-<h3>Women Security App (2025)</h3>
+<h3>Women Security App</h3>
 
 <ul>
-
 <li>Emergency mobile safety application</li>
-
-<li>One-tap SOS alert</li>
-
+<li>SOS alert system</li>
 <li>Real-time GPS tracking</li>
-
-<li>Automatic emergency messaging</li>
-
 </ul>
 
 </div>
 
 <div class="card">
 
-<h3>AI Smart Attendance System (2024)</h3>
+<h3>AI Smart Attendance System</h3>
 
 <ul>
-
 <li>AI based attendance verification</li>
-
-<li>Student counting using computer vision</li>
-
+<li>Computer vision student counting</li>
 <li>Automated attendance detection</li>
-
 </ul>
+
+</div>
+
+</section>
+
+<section id="references" class="section">
+
+<h2>References</h2>
+
+<div class="card">
+
+<h3>Dr. Jeyemukam</h3>
+
+<p>Senior Lecturer</p>
+
+<p>Vavuniya Campus</p>
+
+<p>Email: jayamukan@gmail.com</p>
 
 </div>
 
@@ -364,3 +361,4 @@ btn.textContent="🌙"
 
 </body>
 </html>
+```
