@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<html>
-
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 <title>Pavithra | Portfolio</title>
 
 <style>
 
-:root {
-  --bg: #0f172a;
-  --text: white;
-  --nav-bg: #020617;
-  --card-bg: #1e293b;
-  --accent: #38bdf8;
-  --btn-bg: #38bdf8;
-  --btn-text: black;
+:root{
+--bg:#0f172a;
+--text:white;
+--nav-bg:#020617;
+--card-bg:#1e293b;
+--accent:#38bdf8;
+--btn-bg:#38bdf8;
+--btn-text:black;
 }
 
-.light-mode {
-  --bg: #f8fafc;
-  --text: #1e293b;
-  --nav-bg: #e2e8f0;
-  --card-bg: #f1f5f9;
-  --accent: #2563eb;
-  --btn-bg: #2563eb;
-  --btn-text: white;
+.light-mode{
+--bg:#f8fafc;
+--text:#1e293b;
+--nav-bg:#e2e8f0;
+--card-bg:#f1f5f9;
+--accent:#2563eb;
+--btn-bg:#2563eb;
+--btn-text:white;
 }
 
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:var(--bg);
 color:var(--text);
 line-height:1.6;
-transition: background 0.3s, color 0.3s;
+transition:0.3s;
 }
 
 nav{
@@ -52,13 +45,12 @@ padding:20px;
 background:var(--nav-bg);
 position:sticky;
 top:0;
-transition: background 0.3s;
 }
 
 nav a{
 color:var(--text);
+margin:0 10px;
 text-decoration:none;
-margin:0 15px;
 font-weight:bold;
 }
 
@@ -66,48 +58,31 @@ nav a:hover{
 color:var(--accent);
 }
 
-.lang button{
-background:var(--btn-bg);
-color:var(--btn-text);
+#theme-toggle{
+background:none;
 border:none;
-padding:5px 10px;
-margin-left:5px;
+font-size:20px;
 cursor:pointer;
-border-radius:5px;
-font-weight:bold;
-transition: background 0.3s;
-}
-
-#theme-toggle {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 10px;
+color:var(--text);
 }
 
 .hero{
-  padding:80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
+padding:80px 20px;
+text-align:center;
 }
 
-.hero-content {
-  max-width: 600px;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent);
+.profile-pic{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid var(--accent);
 }
 
 .section{
-padding:60px;
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
 }
 
 .card{
@@ -115,7 +90,6 @@ background:var(--card-bg);
 padding:20px;
 margin-top:20px;
 border-radius:10px;
-transition: background 0.3s;
 }
 
 .btn{
@@ -125,170 +99,82 @@ padding:10px 20px;
 border-radius:20px;
 text-decoration:none;
 font-weight:bold;
-margin-top:10px;
 display:inline-block;
-transition: background 0.3s, color 0.3s;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.card {
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.card:nth-child(odd) {
-  transform: translateX(-50px);
-}
-
-.card:nth-child(even) {
-  transform: translateX(50px);
-}
-
-.hero {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.profile-pic {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
-.animate {
-  opacity: 1 !important;
-  transform: translateY(0) translateX(0) scale(1) !important;
+margin-top:10px;
 }
 
 footer{
 text-align:center;
 padding:20px;
 background:var(--nav-bg);
-transition: background 0.3s;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 10px;
-  }
-  nav h2 {
-    margin-bottom: 10px;
-  }
-  nav > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-  nav a {
-    margin: 5px 10px;
-  }
-  .lang {
-    display: flex;
-    justify-content: center;
-  }
-  .hero {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  .section {
-    padding: 40px 20px;
-  }
-  .card {
-    padding: 15px;
-  }
+@media(max-width:768px){
+.hero{
+padding:40px 10px;
+}
 }
 
 </style>
-
-<title>Pavithra Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
-
 </head>
 
 <body>
 
-<canvas id="particles"></canvas>
+<nav>
+<h2>Pavithra</h2>
 
-<header>
-<img src="images/profile.jpg" alt="Pavithra Photo" class="profile">
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 
-<h1>I. PAVITHRA</h1>
+<button id="theme-toggle">🌙</button>
+</div>
+</nav>
+
+<section class="hero">
+
+<img src="images/profile.jpg" class="profile-pic">
+
+<h1>I. Pavithra</h1>
 
 <h3>Data Analyst | Python Developer | QA Engineer</h3>
 
+<p>Jaffna, Sri Lanka</p>
+
 <p>
-Jaffna, Sri Lanka | +94 0750258505 | ilanheeranpavithra@gmail.com
+📞 +94 750258505  
+📧 ilanheeranpavithra@gmail.com
 </p>
 
 <p>
 
-LinkedIn: Your LinkedIn Profile | GitHub: Your GitHub Profile
+<a href="https://www.linkedin.com/in/pavithra-ilanheeran-70736b3b7" target="_blank">LinkedIn</a> |
+<a href="https://github.com/pavithrailanheeran2-glitch" target="_blank">GitHub</a>
+
 </p>
 
-<p id="summary"></p>
+<a href="cv/pavithra_cv.pdf" class="btn" download>Download CV</a>
+
+</section>
+
+<section id="about" class="section">
+
+<h2>Professional Summary</h2>
+
+<div class="card">
+
+<p>
+
+Aspiring data professional with a strong foundation in Applied Mathematics and Computing.  
+Skilled in data analysis, machine learning, and software development.  
+
+Passionate about using data and technology to solve real-world problems and support data-driven decision-making.
+
+</p>
 
 </div>
 
@@ -296,57 +182,11 @@ LinkedIn: Your LinkedIn Profile | GitHub: Your GitHub Profile
 
 <section id="experience" class="section">
 
-<h2 id="expTitle"></h2>
+<h2>Professional Experience</h2>
 
 <div class="card">
 
 <h3>QA Engineer & Python Developer</h3>
-
-<p id="exp1"></p>
-
-</div>
-
-<div class="card">
-
-<h3>Assistant Sales Manager</h3>
-
-<p id="exp2"></p>
-
-<a href="https://www.linkedin.com/in/pavithra-ilanheeran-70736b3b7" target="_blank">LinkedIn</a> |
-<a href="https://github.com/pavithrailanheeran2-glitch" target="_blank">GitHub</a>
-</p>
-
-<a href="cv/pavithra_cv.pdf" class="cvbtn" download>
-Download CV
-</a>
-
-</header>
-
-
-<section class="box">
-
-<h2>Professional Summary</h2>
-
-<p>
-
-Aspiring data professional with a strong foundation in Applied Mathematics and Computing. Skilled in data analysis, machine learning, and software development. Passionate about using data and technology to solve real-world problems and support data-driven decision-making.
-
-I completed my BSc in Applied Mathematics and Computing from the University of Jaffna with a Second Class (Lower Division) and have gained practical experience in QA engineering and Python development.
-
-</p>
-
-</section>
-
-
-<section class="box">
-
-<h2>Professional Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>QA Engineer</h3>
 
 <p>Sukan IT, Sri Lanka</p>
 
@@ -354,22 +194,19 @@ I completed my BSc in Applied Mathematics and Computing from the University of J
 
 <ul>
 
-<li>Conduct comprehensive software quality assurance testing to ensure product reliability</li>
+<li>Conduct software quality assurance testing</li>
 
-<li>Develop and maintain Python-based automation scripts for testing workflows</li>
+<li>Develop Python automation scripts</li>
 
-<li>Identify, document, and track software bugs through systematic testing procedures</li>
+<li>Identify and track software bugs</li>
 
-<li>Collaborate closely with development teams to improve product quality and user experience</li>
-
-<li>Support testing initiatives for data-driven applications and analytics platforms</li>
+<li>Collaborate with developers to improve product quality</li>
 
 </ul>
 
 </div>
 
-
-<div class="timeline-item">
+<div class="card">
 
 <h3>Assistant Sales Manager</h3>
 
@@ -379,214 +216,123 @@ I completed my BSc in Applied Mathematics and Computing from the University of J
 
 <ul>
 
-<li>Managed sales operations and performance analytics for insurance products</li>
+<li>Managed sales operations</li>
 
-<li>Conducted financial consultations and provided personalized client advisory services</li>
+<li>Provided financial consultation</li>
 
-<li>Developed and maintained strong customer relationships through effective communication</li>
+<li>Maintained strong customer relationships</li>
 
-<li>Analyzed sales data to identify trends and optimize performance metrics</li>
+<li>Analyzed sales data</li>
 
 </ul>
 
 </div>
 
-
-</div>
-
 </section>
-
 
 <section id="education" class="section">
 
-<h2 id="eduTitle"></h2>
-
-<div class="card">
-
-<p id="edu1"></p>
-
-</div>
-
-<div class="card">
-
-<p id="edu2"></p>
-
-
-<section class="box">
-
 <h2>Education</h2>
+
+<div class="card">
 
 <h3>BSc Applied Mathematics and Computing</h3>
 
 <p>University of Jaffna</p>
 
-<p>October 2022 – July 2025</p>
+<p>2022 – 2025</p>
 
 <p>Second Class (Lower Division)</p>
 
-<br>
+</div>
+
+<div class="card">
 
 <h3>GCE Advanced Level</h3>
 
 <p>Vaddu Hindu College</p>
 
-<p>July 2018 – October 2021</p>
-
-</section>
-
-
-<section class="box">
-
-<h2>Technical Skills</h2>
-
-<h3>Programming Languages</h3>
-
-<p>Python</p>
-<div class="bar"><div class="python"></div></div>
-
-<p>R</p>
-<div class="bar"><div class="r"></div></div>
-
-<p>SQL</p>
-<div class="bar"><div class="sql"></div></div>
-
-<p>Java</p>
-<div class="bar"><div class="java"></div></div>
-
-<p>C++</p>
-<div class="bar"><div class="cpp"></div></div>
-
-<h3>Web Technologies</h3>
-
-<p>HTML | CSS | JavaScript | React | PHP</p>
-
-<h3>Data Science & AI</h3>
-
-<p>Machine Learning | Computer Vision | Artificial Intelligence | Data Visualization | Statistical Modeling</p>
-
-<h3>Tools & Platforms</h3>
-
-<p>GitHub | MySQL | Jupyter Notebook | VS Code</p>
-
-<h3>Quality Assurance</h3>
-
-<p>
-Manual Testing | Test Case Creation | Bug Tracking & Reporting | STLC | Functional Testing | Regression Testing | API Testing | Test Documentation
-</p>
-
-</section>
-
-
-<section class="box">
-
-<h2>Projects</h2>
-
-<div class="project">
-
-<h3>Women Security App (2025)</h3>
-
-<ul>
-
-<li>Developed a comprehensive mobile application for women's safety during emergencies</li>
-
-<li>Implemented one-tap SOS alerts, real-time GPS tracking, and automatic emergency messaging</li>
-
-<li>Integrated voice recording and location services for enhanced security features</li>
-
-<li>Technologies: Mobile Development, GPS Tracking, Emergency Notification Systems</li>
-
-</ul>
-
-</div>
-
-
-<div class="project">
-
-<h3>AI-Powered Smart Attendance System (2024)</h3>
-
-<ul>
-
-<li>Created an automated attendance verification system using AI and computer vision</li>
-
-<li>Implemented student counting algorithms and attendance sheet scanning capabilities</li>
-
-<li>Developed AI-based verification to detect discrepancies in attendance records</li>
-
-<li>Technologies: Python, Computer Vision, AI, Machine Learning</li>
-
-</ul>
->>>>>>> pavithra-portfolio
+<p>2018 – 2021</p>
 
 </div>
 
 </section>
-
 
 <section id="skills" class="section">
 
-<h2 id="skillsTitle"></h2>
+<h2>Technical Skills</h2>
 
-<div class="card" id="skillsText"></div>
+<div class="card">
+
+<p><b>Programming:</b> Python, R, SQL, Java, C++</p>
+
+<p><b>Web:</b> HTML, CSS, JavaScript, React, PHP</p>
+
+<p><b>Data Science:</b> Machine Learning, AI, Data Visualization</p>
+
+<p><b>Tools:</b> GitHub, MySQL, Jupyter Notebook, VS Code</p>
+
+<p><b>QA:</b> Manual Testing, Regression Testing, Bug Tracking</p>
+
+</div>
 
 </section>
 
 <section id="projects" class="section">
 
-<h2 id="projectsTitle"></h2>
+<h2>Projects</h2>
 
 <div class="card">
 
-<h3>Women Security App</h3>
+<h3>Women Security App (2025)</h3>
 
-<p id="project1"></p>
+<ul>
+
+<li>Emergency mobile safety application</li>
+
+<li>One-tap SOS alert</li>
+
+<li>Real-time GPS tracking</li>
+
+<li>Automatic emergency messaging</li>
+
+</ul>
 
 </div>
 
 <div class="card">
 
-<h3>AI Smart Attendance System</h3>
+<h3>AI Smart Attendance System (2024)</h3>
 
-<p id="project2"></p>
+<ul>
+
+<li>AI based attendance verification</li>
+
+<li>Student counting using computer vision</li>
+
+<li>Automated attendance detection</li>
+
+</ul>
 
 </div>
 
 </section>
 
-<div style="display: flex; gap: 20px;">
+<section id="contact" class="section">
 
-<section id="contact" class="section" style="text-align: right; flex: 1;">
-
-<h2 id="contactTitle"></h2>
+<h2>Contact</h2>
 
 <div class="card">
 
-<p>Email: <a href="mailto:ilanheeranpavithra@gmail.com" style="color:#10b981;">ilanheeranpavithra@gmail.com</a></p>
+<p>📍 Jaffna, Sri Lanka</p>
 
-<p>Phone: +94 0750258505</p>
+<p>📞 +94 750258505</p>
 
-<p>Location: Jaffna, Sri Lanka</p>
+<p>📧 ilanheeranpavithra@gmail.com</p>
 
 </div>
 
 </section>
-
-<section id="references" class="section" style="flex: 1;">
-
-<h2>REFERENCES</h2>
-
-<div class="card">
-
-<h3>Dr. Jeyemukam</h3>
-
-<p>Senior Lecturer, Vavuniya</p>
-
-<p>Email: <a href="mailto:jayamukan@gmail.com" style="color:#10b981;">jayamukan@gmail.com</a></p>
-
-</div>
-
-</section>
-
-</div>
 
 <footer>
 
@@ -596,284 +342,25 @@ Manual Testing | Test Case Creation | Bug Tracking & Reporting | STLC | Function
 
 <script>
 
-const data={
+document.getElementById("theme-toggle").addEventListener("click",()=>{
 
-en:{
+document.body.classList.toggle("light-mode")
 
-summary:`Aspiring data professional with a strong foundation in Applied Mathematics and Computing. Skilled in data analysis, machine learning, and software development. Passionate about using data and technology to solve real-world problems and support data-driven decision-making.`,
+const btn=document.getElementById("theme-toggle")
 
-expTitle:"Professional Experience",
+if(document.body.classList.contains("light-mode")){
 
-exp1:`Sukan IT, Sri Lanka (Jan 2026 – Present)
-<ul>
-<li>Conduct comprehensive software testing including functional, regression, and performance testing</li>
-<li>Develop and maintain Python automation scripts for test cases and data processing</li>
-<li>Track and manage bugs using JIRA, ensuring timely resolution and quality improvements</li>
-<li>Collaborate with cross-functional teams including developers and product managers to enhance product quality</li>
-<li>Participate in agile development processes and contribute to continuous integration practices</li>
-</ul>`,
+btn.textContent="☀️"
 
-exp2:`Union Assurance PLC, Vavuniya, Sri Lanka
-August 2025 – January 2026
-<ul>
-<li>Managed sales operations and performance analytics for insurance products</li>
-<li>Conducted financial consultations and provided personalized client advisory services</li>
-<li>Developed and maintained strong customer relationships through effective communication</li>
-<li>Analyzed sales data to identify trends and optimize performance metrics</li>
-</ul>`,
+}else{
 
-eduTitle:"Education",
-
-edu1:`Bachelor of Science in Applied Mathematics and Computing<br>
-University of Jaffna, Sri Lanka<br>
-October 2022 – July 2025 (Expected)<br>
-Focus Areas: Data Analytics, Statistics, Machine Learning, Linear Algebra, Optimization, Programming, Data Science<br>
-2nd lower class`,
-
-edu2:`GCE Advanced Level (Physical Science Stream)<br>
-Vaddu Hindu College, Vaddukoddai, Sri Lanka<br>
-July 2018 – October 2021`,
-
-skillsTitle:"Technical Skills",
-
-skills:`<h4>Programming Languages:</h4><p>Python, R, SQL, Java, C++</p>
-
-<h4>Web Technologies:</h4><p>HTML, CSS, JavaScript, React, PHP</p>
-
-<h4>Data Science & AI:</h4><p>Machine Learning, Computer Vision, Artificial Intelligence, Data Visualization, Statistical Modeling</p>
-
-<h4>Tools & Platforms:</h4><p>GitHub, MySQL, Jupyter Notebook, VS Code</p>
-
-<h4>Quality Assurance:</h4><p>Manual Testing, Test Case Creation, Bug Tracking, STLC, Functional Testing, Regression Testing, API Testing</p>`,
-
-projectsTitle:"Projects",
-
-project1:`2025<br>
-<ul>
-<li>Developed a comprehensive mobile application for women's safety during emergencies</li>
-<li>Implemented one-tap SOS alerts, real-time GPS tracking, and automatic emergency messaging</li>
-<li>Integrated voice recording and location services for enhanced security features</li>
-<li>Technologies: Mobile Development, GPS Tracking, Emergency Notification Systems</li>
-</ul>`,
-
-project2:`2024<br>
-<ul>
-<li>Created an automated attendance verification system using AI and computer vision</li>
-<li>Implemented student counting algorithms and attendance sheet scanning capabilities</li>
-<li>Developed AI-based verification to detect discrepancies in attendance</li>
-</ul>`,
-
-contactTitle:"Contact"
-
-},
-
-ta:{
-
-summary:`Applied Mathematics மற்றும் Computing துறையில் வலுவான அடிப்படை கொண்ட data professional ஆக விரும்புகிறேன்.`,
-
-expTitle:"வேலை அனுபவம்",
-
-exp1:`Sukan IT (2026 – தற்போது)
-<ul>
-<li>Software testing மற்றும் Python automation scripts உருவாக்கம்</li>
-</ul>`,
-
-exp2:`Union Assurance PLC (2025 – 2026)
-<ul>
-<li>Insurance sales management மற்றும் financial consultation</li>
-</ul>`,
-
-eduTitle:"கல்வி",
-
-edu1:`Applied Mathematics and Computing – University of Jaffna<br>
-Second Class (Lower Division)`,
-
-edu2:`GCE Advanced Level – Vaddu Hindu College`,
-
-skillsTitle:"தொழில்நுட்ப திறன்கள்",
-
-skills:`<h4>Programming:</h4><p>Python, R, SQL, Java, C++</p>
-
-<h4>Web:</h4><p>HTML, CSS, JavaScript, React</p>
-
-<h4>Data Science:</h4><p>Machine Learning, AI</p>
-
-<h4>Tools:</h4><p>GitHub, MySQL, VS Code</p>
-
-<h4>QA:</h4><p>Manual Testing, Regression Testing</p>`,
-
-projectsTitle:"திட்டங்கள்",
-
-project1:`2025<br>
-<ul>
-<li>பெண்கள் பாதுகாப்புக்கான mobile application</li>
-</ul>`,
-
-project2:`2024<br>
-<ul>
-<li>AI attendance verification system</li>
-</ul>`,
-
-contactTitle:"தொடர்பு"
-
-},
-
-si:{
-
-summary:`Applied Mathematics සහ Computing පදනමක් ඇති data professional කෙනෙකු වීමට කැමතියි.`,
-
-expTitle:"වෘත්තීය පළපුරුද්ද",
-
-exp1:`Sukan IT (2026 – Present)
-<ul>
-<li>Software testing සහ Python automation scripts</li>
-</ul>`,
-
-exp2:`Union Assurance PLC (2025 – 2026)
-<ul>
-<li>Insurance sales management</li>
-</ul>`,
-
-eduTitle:"අධ්‍යාපනය",
-
-edu1:`Applied Mathematics and Computing – University of Jaffna<br>
-Second Class (Lower Division)`,
-
-edu2:`GCE Advanced Level – Vaddu Hindu College`,
-
-skillsTitle:"තාක්ෂණික කුසලතා",
-
-skills:`<h4>Programming:</h4><p>Python, R, SQL</p>
-
-<h4>Web:</h4><p>HTML, CSS, JavaScript</p>
-
-<h4>Data Science:</h4><p>Machine Learning</p>
-
-<h4>Tools:</h4><p>GitHub, MySQL</p>`,
-
-projectsTitle:"ව්‍යාපෘති",
-
-project1:`2025<br>
-<ul>
-<li>Women safety mobile application</li>
-</ul>`,
-
-project2:`2024<br>
-<ul>
-<li>AI attendance system</li>
-</ul>`,
-
-contactTitle:"සම්බන්ධ වන්න"
+btn.textContent="🌙"
 
 }
 
-}
-
-function setLang(lang){
-
-document.getElementById("summary").innerText=data[lang].summary
-document.getElementById("expTitle").innerText=data[lang].expTitle
-document.getElementById("exp1").innerHTML=data[lang].exp1
-document.getElementById("exp2").innerHTML=data[lang].exp2
-document.getElementById("eduTitle").innerText=data[lang].eduTitle
-document.getElementById("edu1").innerHTML=data[lang].edu1
-document.getElementById("edu2").innerHTML=data[lang].edu2
-document.getElementById("skillsTitle").innerText=data[lang].skillsTitle
-document.getElementById("skillsText").innerHTML=data[lang].skills
-document.getElementById("projectsTitle").innerText=data[lang].projectsTitle
-document.getElementById("project1").innerHTML=data[lang].project1
-document.getElementById("project2").innerHTML=data[lang].project2
-document.getElementById("contactTitle").innerText=data[lang].contactTitle
-
-}
-
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  const toggle = document.getElementById('theme-toggle');
-  if (document.body.classList.contains('light-mode')) {
-    toggle.textContent = '☀️';
-  } else {
-    toggle.textContent = '🌙';
-  }
-});
-
-setLang("en")
-
-// Scroll animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-    }
-  });
-}, observerOptions);
-
-// Observe elements
-document.querySelectorAll('.section, .card, .hero, .profile-pic').forEach(el => {
-  observer.observe(el);
-});
+})
 
 </script>
 
 </body>
 </html>
-
-
-<section class="box">
-
-<h2>Certifications & Training</h2>
-
-<p>Add your certifications or training here.</p>
-
-</section>
-
-
-<section class="box">
-
-<h2>Languages</h2>
-
-<p>English – Professional Working Proficiency</p>
-
-<p>Tamil – Native</p>
-
-</section>
-
-
-<section class="box">
-
-<h2>References</h2>
-
-<h4>Dr. Jeyemukam</h4>
-
-<p>Senior Lecturer, Vavuniya</p>
-
-<p>Email: jayamukan@gmail.com</p>
-
-
-
-</section>
-
-
-<section class="box">
-
-<h2>Contact</h2>
-
-<p>📍 Jaffna, Sri Lanka</p>
-
-<p>📞 +94 0750258505</p>
-
-<p>📧 ilanheeranpavithra@gmail.com</p>
-
-</section>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
